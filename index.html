@@ -40,7 +40,7 @@
 <body>
     <div id="counter">
         <h2>
-            Time left in 2021
+            Время до конца 2023
         </h2>    
         
             <h2 class="box" id="days"></h2>
@@ -55,9 +55,9 @@
 
 <script>
     function CountDownTimer  (date) {
-    left_days = document.getElementById("days");
-    left_hours = document.getElementById("hours");
-    left_minutes = document.getElementById("minutes");
+    left_days = document.getElementById("дней");
+    left_hours = document.getElementById("час(ов)");
+    left_minutes = document.getElementById("мин");
 
     end = new Date(date);
     _second = 1000;
@@ -71,14 +71,10 @@
     distance2 = new Date("01/01/2023 00:00 AM") - now
     if (distance <= 0 ){
       clearInterval (timer)
-      document.getElementById("counter").innerHTML = "<h2>Nothing! It's Over<h2>";
+      document.getElementById("counter").innerHTML = "<h2>С новым 2024 годом!<h2>";
       return
     }
-    else if (distance2 > 0  ){
-      clearInterval (timer)
-      document.getElementById("counter").innerHTML =  "<h2>2021 Didn't Start yet!</h2>";
-      return
-    } 
+  
     days = Math.floor(distance / _day)
     hours = Math.floor((distance % _day) / _hour)
     minutes = Math.floor((distance % _hour) / _minute)
